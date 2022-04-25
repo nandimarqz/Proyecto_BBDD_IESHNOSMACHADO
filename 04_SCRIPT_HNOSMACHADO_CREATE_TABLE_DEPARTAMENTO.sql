@@ -1,15 +1,14 @@
 ------------------------------------------------------
 -- Autor       : IES HERMANOS MACHADO
--- Descripción : Script 2 CREACION TABLA DEPARTAMENTO - PROYECTO BBDD
--- Responsables : Fernando Márquez Rodríguez , Rafael José Ossorio Lopéz, Victor Carrasco Artacho, Carlos González Ruiz, Gabriel Rodríguez Félix 
+-- Descripcion : Script 2 CREACION TABLA DEPARTAMENTO - PROYECTO BBDD
+-- Responsables : Fernando Marquez Rodriguez , Rafael Jose Ossorio Lopez, Victor Carrasco Artacho, Carlos Gonzalez Ruiz, Gabriel Rodriguez Felix 
 ------------------------------------------------------
 
 CREATE TABLE DEPARTAMENTO(
 
 COD_DEPARTAMENTO NUMBER(4),
-ESPECIALIDAD     VARCHAR(50),
-NEMPLEADOS       NUMBER(5),
-JEFEDEPT         NUMBER(6)
+ESPECIALIDAD     VARCHAR2(50),
+NEMPLEADOS       NUMBER(5)
 
 );
 
