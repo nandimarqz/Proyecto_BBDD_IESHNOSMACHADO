@@ -5,7 +5,7 @@
 ------------------------------------------------------
 
 CREATE TABLE CLIENTE (
-NIF                 VARCHAR2(9)NOT NULL ,
+NIF                 VARCHAR2(9),
 DIRECCION_DOMICILIO VARCHAR2(50),
 NUMERO_TELEFONO     NUMBER(9) NOT NULL ,
 CODPOSTAL           NUMBER(5),
