@@ -1,0 +1,23 @@
+------------------------------------------------------
+-- Autor       : IES HERMANOS MACHADO
+-- Descripci�n : Script 2 CREACION TABLA DEPARTAMENTO - PROYECTO BBDD
+-- Responsables : Fernando M�rquez Rodr�guez , Rafael Jos� Ossorio Lop�z, Victor Carrasco Artacho, Carlos Gonz�lez Ruiz, Gabriel Rodr�guez F�lix 
+------------------------------------------------------
+CREATE TABLE DEPARTAMENTO(
+
+COD_DEPARTAMENTO NUMBER(4),
+ESPECIALIDAD     VARCHAR2(50),
+EMPLEADO_JEFE       NUMBER(6)
+    
+
+);
+
+ALTER TABLE DEPARTAMENTO
+ADD CONSTRAINT DEPARTAMENTO_PK_COD_DEPT PRIMARY KEY (COD_DEPARTAMENTO)
+ADD CONSTRAINT DEPARTAMENTO_FK_JEFE FOREIGN KEY (EMPLEADO_JEFE) REFERENCES EMPLEADO(CODEMPLEADO);
+
+CREATE SEQUENCE SEQ_COD_DEPARTAMENTO
+    START WITH 1
+    INCREMENT BY 1
+    MAXVALUE 9999
+;

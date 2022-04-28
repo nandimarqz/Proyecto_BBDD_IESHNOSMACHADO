@@ -1,13 +1,13 @@
 ------------------------------------------------------
 -- Autor       : IES HERMANOS MACHADO
--- Descripción : Script 2 CREACION TABLA CLIENTE - PROYECTO BBDD
--- Responsables : Fernando Márquez Rodríguez , Rafael José Ossorio Lopéz, Victor Carrasco Artacho, Carlos González Ruiz, Gabriel Rodríguez Félix 
+-- Descripciï¿½n : Script 2 CREACION TABLA CLIENTE - PROYECTO BBDD
+-- Responsables : Fernando Mï¿½rquez Rodrï¿½guez , Rafael Josï¿½ Ossorio Lopï¿½z, Victor Carrasco Artacho, Carlos Gonzï¿½lez Ruiz, Gabriel Rodrï¿½guez Fï¿½lix 
 ------------------------------------------------------
 
 CREATE TABLE CLIENTE (
-NIF                 VARCHAR2(9)NOT NULL ,
+NIF                 VARCHAR2(9),
 DIRECCION_DOMICILIO VARCHAR2(50),
-NUMERO_TELEFONO     NUMBER(9) NOT NULL ,
+NUMERO_TELEFONO     NUMBER(9),
 CODPOSTAL           NUMBER(5),
 EMAIL               VARCHAR2(50)
 );
