@@ -1,7 +1,7 @@
 ------------------------------------------------------
 -- Autor       : IES HERMANOS MACHADO
--- Descripci√≥n : Script 16 CONSULTAS - PROYECTO BBDD
--- Responsables : Fernando M√°rquez Rodr√≠guez , Rafael Jos√© Ossorio Lop√©z, Victor Carrasco Artacho, Carlos Gonz√°lez Ruiz, Gabriel Rodr√≠guez F√©lix 
+-- DescripciÛn : Script 16 CONSULTAS - PROYECTO BBDD
+-- Responsables : Fernando M·rquez RodrÌguez , Rafael JosÈ Ossorio LopÈz, Victor Carrasco Artacho, Carlos Gonz·lez Ruiz, Gabriel RodrÌguez FÈlix 
 ------------------------------------------------------
 
 /*1.  Mostrar NIF, direcci√≥n y Email de los empleados. */

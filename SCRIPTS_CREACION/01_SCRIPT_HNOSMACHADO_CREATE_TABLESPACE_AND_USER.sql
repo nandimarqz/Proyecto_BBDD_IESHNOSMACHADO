@@ -1,12 +1,13 @@
 ------------------------------------------------------
 -- Autor       : IES HERMANOS MACHADO
--- Descripciï¿½n : Script CREACION TABLESPACE Y USUARIO - PROYECTO BBDD
--- Responsables : Fernando Mï¿½rquez Rodrï¿½guez , Rafael Josï¿½ Ossorio Lopï¿½z, Victor Carrasco Artacho, Carlos Gonzï¿½lez Ruiz, Gabriel Rodrï¿½guez Fï¿½lix 
+-- Descripción : Script CREACION TABLESPACE Y USUARIO - PROYECTO BBDD
+-- Responsables : Fernando Márquez Rodríguez , Rafael José Ossorio Lopéz, Victor Carrasco Artacho, Carlos González Ruiz, Gabriel Rodríguez Félix 
 ------------------------------------------------------
 
 /*CREAMOS EL TABLESPACE CON EL SYS PARA LUEGO PONERSELO AL USUARIO*/
 CREATE TABLESPACE PROYECTO_BBDD_DUAL_DATOS DATAFILE
-'F:\bbdd\Oracle\product\18.0.0\oradata\XE\proyecto_bbdd_dual_datos2.dbf'
+--'F:\bbdd\Oracle\product\18.0.0\oradata\XE\proyecto_bbdd_dual_datos2.dbf'
+'E:\Oracle\oradata\XE\proyecto_bbdd_dual_datos2.dbf'
 SIZE 100M 
 AUTOEXTEND ON NEXT 100M MAXSIZE UNLIMITED;
 
