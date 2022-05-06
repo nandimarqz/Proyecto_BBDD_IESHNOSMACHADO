@@ -18,7 +18,7 @@ BEGIN
         
             VALOR:= CALCULAR_CONTRATO(DATOSCONTADOR.CONSUMO, DATOSCONTADOR.TIPO);
             
-            DBMS_OUTPUT.PUT_LINE('El valor del contrato ' || DATOSCONTRATO.COD_CONTRATO || ' es de un valor de: '|| VALOR || '€');
+            DBMS_OUTPUT.PUT_LINE('El valor del contrato ' || DATOSCONTRATO.COD_CONTRATO || ' es de un valor de: '|| VALOR || 'â‚¬');
         
         END LOOP;
     
