@@ -1,8 +1,11 @@
 ------------------------------------------------------
 -- Autor       : IES HERMANOS MACHADO
--- Descripción : Script 3 SCRIPT PLSQL - PROYECTO BBDD
--- Responsables : Fernando Márquez Rodríguez , Rafael José Ossorio Lopéz, Victor Carrasco Artacho, Carlos González Ruiz, Gabriel Rodríguez Félix 
+-- DescripciÃ³n : Script 3 SCRIPT PLSQL - PROYECTO BBDD
+-- Responsables : Fernando MÃ¡rquez RodrÃ­guez , Rafael JosÃ© Ossorio LopÃ©z, Victor Carrasco Artacho, Carlos GonzÃ¡lez Ruiz, Gabriel RodrÃ­guez FÃ©lix 
 ------------------------------------------------------
+
+/*Este PL_SQL muestra el valor en euros de todos los contratos activos llamando a la funcion calcular_contrato se obtiene el valor 
+del contrato en funcion del tipo y el consumo.*/
 
 DECLARE
 
@@ -23,7 +26,7 @@ BEGIN
         
             VALOR:= CALCULAR_CONTRATO(DATOSCONTADOR.CONSUMO, DATOSCONTADOR.TIPO);
             
-            DBMS_OUTPUT.PUT_LINE('El valor del contrato ' || DATOSCONTRATO.COD_CONTRATO || ' es de un valor de: '|| VALOR || 'â‚¬');
+            DBMS_OUTPUT.PUT_LINE('El valor del contrato ' || DATOSCONTRATO.COD_CONTRATO || ' es de un valor de: '|| VALOR || 'Ã¢â€šÂ¬');
         
         END LOOP;
     
