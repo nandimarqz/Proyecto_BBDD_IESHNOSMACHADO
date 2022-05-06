@@ -1,8 +1,10 @@
 ------------------------------------------------------
 -- Autor       : IES HERMANOS MACHADO
--- Descripción : Script 1 CREACIÓN FUNCIÓN CALCULAR_CONTRATO - PROYECTO BBDD
--- Responsables : Fernando Márquez Rodríguez , Rafael José Ossorio Lopéz, Victor Carrasco Artacho, Carlos González Ruiz, Gabriel Rodríguez Félix 
+-- DescripciÃ³n : Script 1 CREACIÃ“N FUNCIÃ“N CALCULAR_CONTRATO - PROYECTO BBDD
+-- Responsables : Fernando MÃ¡rquez RodrÃ­guez , Rafael JosÃ© Ossorio LopÃ©z, Victor Carrasco Artacho, Carlos GonzÃ¡lez Ruiz, Gabriel RodrÃ­guez FÃ©lix 
 ------------------------------------------------------
+
+/*Esta funcion devuelve un numero que es el valor en euros del contrato en funcion del tipo/especialidad y el consumo que se le pasen por parametro*/
 
 CREATE FUNCTION CALCULAR_CONTRATO (CONSUMO NUMBER, ESPECIALIDAD VARCHAR2) RETURN NUMBER
 IS

@@ -1,12 +1,12 @@
 ------------------------------------------------------
 -- Autor       : IES HERMANOS MACHADO
--- Descripción : Script CREACION TABLESPACE Y USUARIO - PROYECTO BBDD
--- Responsables : Fernando Márquez Rodríguez , Rafael José Ossorio Lopéz, Victor Carrasco Artacho, Carlos González Ruiz, Gabriel Rodríguez Félix 
+-- Descripciï¿½n : Script CREACION TABLESPACE Y USUARIO - PROYECTO BBDD
+-- Responsables : Fernando Mï¿½rquez Rodrï¿½guez , Rafael Josï¿½ Ossorio Lopï¿½z, Victor Carrasco Artacho, Carlos Gonzï¿½lez Ruiz, Gabriel Rodrï¿½guez Fï¿½lix 
 ------------------------------------------------------
 
 CREATE TABLE INMUEBLE(
 COD_CATASTRAL         VARCHAR2(20),
-DIRECCION             VARCHAR(50)NOT NULL, 
+DIRECCION             VARCHAR2(50)NOT NULL, 
 CODPOSTAL             NUMBER(5)NOT NULL,
 EFICIENCIA_ENERGETICA CHAR NOT NULL
    
