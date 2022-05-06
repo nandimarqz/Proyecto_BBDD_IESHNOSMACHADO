@@ -1,3 +1,8 @@
+------------------------------------------------------
+-- Autor       : IES HERMANOS MACHADO
+-- Descripción : Script 3 SCRIPT PLSQL - PROYECTO BBDD
+-- Responsables : Fernando Márquez Rodríguez , Rafael José Ossorio Lopéz, Victor Carrasco Artacho, Carlos González Ruiz, Gabriel Rodríguez Félix 
+------------------------------------------------------
 
 DECLARE
 
