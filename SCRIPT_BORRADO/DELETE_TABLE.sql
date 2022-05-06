@@ -1,6 +1,6 @@
 ------------------------------------------------------
 -- Autor       : IES HERMANOS MACHADO
--- Descripcion : Script 2 CREACION TABLA DEPARTAMENTO - PROYECTO BBDD
+-- Descripcion : Script BORRADO - PROYECTO BBDD
 -- Responsables : Fernando Marquez Rodriguez , Rafael Jose Ossorio Lopez, Victor Carrasco Artacho, Carlos Gonzalez Ruiz, Gabriel Rodriguez Felix 
 ------------------------------------------------------
 

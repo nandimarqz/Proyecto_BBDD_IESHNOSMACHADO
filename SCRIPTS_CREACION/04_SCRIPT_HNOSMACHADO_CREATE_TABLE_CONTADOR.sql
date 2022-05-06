@@ -1,13 +1,13 @@
 ------------------------------------------------------
 -- Autor       : IES HERMANOS MACHADO
--- Descripciï¿½n : Script 2 CREACION TABLA CONTADOR - PROYECTO BBDD
--- Responsables : Fernando Mï¿½rquez Rodrï¿½guez , Rafael Josï¿½ Ossorio Lopï¿½z, Victor Carrasco Artacho, Carlos Gonzï¿½lez Ruiz, Gabriel Rodrï¿½guez Fï¿½lix 
+-- Descripción : Script CREACION TABLESPACE Y USUARIO - PROYECTO BBDD
+-- Responsables : Fernando Márquez Rodríguez , Rafael José Ossorio Lopéz, Victor Carrasco Artacho, Carlos González Ruiz, Gabriel Rodríguez Félix 
 ------------------------------------------------------
 
 CREATE TABLE CONTADOR(
 COD_CONTADOR  NUMBER(4),
 COD_CATASTRAL VARCHAR2(20),
-TIPO          VARCHAR2(20),
+TIPO          VARCHAR2(20) NOT NULL,
 CONSUMO       NUMBER(7,2)
     
 );

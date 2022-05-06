@@ -1,0 +1,65 @@
+------------------------------------------------------
+-- Autor       : IES HERMANOS MACHADO
+-- DescripciÛn : Script 16 CONSULTAS - PROYECTO BBDD
+-- Responsables : Fernando M·rquez RodrÌguez , Rafael JosÈ Ossorio LopÈz, Victor Carrasco Artacho, Carlos Gonz·lez Ruiz, Gabriel RodrÌguez FÈlix 
+------------------------------------------------------
+
+/*1.  Mostrar NIF, direcci√≥n y Email de los empleados. */
+SELECT NIF, DIRECCION_DOMICILIO, EMAIL
+FROM EMPLEADO;
+
+/*2.  Mostrar NIF, direcci√≥n y c√≥digo postal de los clientes con c√≥digo postal 41003. */
+SELECT NIF, DIRECCION_DOMICILIO, CODPOSTAL
+FROM CLIENTE
+WHERE CODPOSTAL=41003;
+
+/*3.  Mostrar contratos del cliente con NIF '99999999I'. */
+SELECT *
+FROM CONTRATO
+WHERE NIF_CLIENTE='99999999I';
+
+/*4.  Mostrar inmuebles con eficiencia de tipo 'A'. */
+SELECT *
+FROM INMUEBLE
+WHERE EFICIENCIA_ENERGETICA='A';
+
+/*5.  Mostrar contadores de tipo 'GAS'. */
+SELECT *
+FROM CONTADOR
+WHERE TIPO='GAS';
+
+/*6.  Mostrar contadores de tipo 'ELECTRICIDAD' y con un consumo mayor a 10000. */
+SELECT *
+FROM CONTADOR
+WHERE TIPO='ELECTRICIDAD' AND
+      CONSUMO > 10000;
+
+/*7.  Mostrar el NIF, la direcci√≥n y c√≥digo postal de los empleados de cada departamento y ordernarlo por el c√≥digo de departamento. */
+SELECT DEPARTAMENTO.*, EMPLEADO.*
+FROM DEPARTAMENTO
+INNER JOIN EMPLEADO
+ON DEPARTAMENTO.COD_DEPARTAMENTO = EMPLEADO.COD_DEPARTAMENTO
+ORDER BY DEPARTAMENTO.COD_DEPARTAMENTO;
+
+/*8. Mostrar los contadores que no est√°n dentro de ning√∫n contrato. */
+SELECT CONTADOR.*
+FROM CONTRATO
+RIGHT JOIN CONTADOR
+ON CONTADOR.COD_CONTADOR = CONTRATO.COD_CONTADOR
+WHERE CONTRATO.COD_CONTADOR IS NULL;
+
+/*9.  Mostrar empleados que son jefe de departamentos con especialidad 'Gas'. */
+SELECT *
+FROM EMPLEADO
+WHERE CODEMPLEADO IN(SELECT EMPLEADO_JEFE FROM DEPARTAMENTO WHERE ESPECIALIDAD='Gas');
+
+/*10. Mostrar los departamentos a los que pertenecen los contratos cuyos contadores pertenecen a un inmueble de eficiencia energ√©tica tipo 'B'*/
+SELECT *
+FROM DEPARTAMENTO
+WHERE COD_DEPARTAMENTO IN(SELECT COD_DEPARTAMENTO
+                          FROM CONTRATO
+                          WHERE COD_CONTADOR IN(SELECT COD_CONTADOR
+                                                FROM CONTADOR
+                                                WHERE COD_CATASTRAL IN(SELECT COD_CATASTRAL
+                                                                       FROM INMUEBLE
+                                                                       WHERE EFICIENCIA_ENERGETICA='B') ) );
