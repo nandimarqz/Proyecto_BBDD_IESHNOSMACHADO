@@ -45,6 +45,7 @@ BEGIN
                         FETCH C_CONTADOR INTO DATOS_C_CONTADOR;
                         EXIT WHEN C_CONTADOR%NOTFOUND;
                             DBMS_OUTPUT.PUT_LINE(CHR(9)||CHR(9)||'-Código catastral: '||DATOS_C_CONTADOR.COD_CATASTRAL);
+                            DBMS_OUTPUT.PUT_LINE('');
                     CLOSE C_CONTADOR;
             END LOOP;
             CLOSE C_CONTRATO;
