@@ -9,6 +9,7 @@ encargado de gestionar el contrato de cada uno de los clientes, para facilitar a
 información al alcance de una manera rápida.*/
 
 DECLARE
+    --Creación de cursores
     CURSOR C_CLIENTE IS
         SELECT NIF
         FROM CLIENTE;
@@ -30,17 +31,22 @@ DECLARE
 BEGIN
     OPEN C_CLIENTE;
     LOOP
+        --Navegamos por el cursor de clientes para obtener sus DNI y lo sacamos por consola.
         FETCH C_CLIENTE INTO DATOS_C_CLIENTE;
         EXIT WHEN C_CLIENTE%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE('NIF Cliente: ' || DATOS_C_CLIENTE.NIF);
+        DBMS_OUTPUT.PUT_LINE('NIF Cliente: ' || DATOS_C_CLIENTE.NIF);       
+        --Abrimos el cursor de contratos usando el DNI de la iteración actual como parámetro.
         OPEN C_CONTRATO(DATOS_C_CLIENTE.NIF);
         LOOP
             FETCH C_CONTRATO INTO DATOS_C_CONTRATO;
             EXIT WHEN C_CONTRATO%NOTFOUND;
             DBMS_OUTPUT.PUT_LINE('');
+            --Imprimimos la información referente al código del departamento en el que estamos actualmente.
             DBMS_OUTPUT.PUT_LINE(CHR(9)|| 'Datos de contacto de los empleados del departamento ' || DATOS_C_CONTRATO.COD_DEPARTAMENTO);
+            --Abrimos el cursor de empleados usando el código de contrato de la iteración actual
             OPEN C_EMPLEADO(DATOS_C_CONTRATO.COD_DEPARTAMENTO);
                 LOOP
+                    --En cada vuelta obtenemos los datos de los empleados y los sacamos por consola.
                     FETCH C_EMPLEADO INTO DATOS_C_EMPLEADO;
                     EXIT WHEN C_EMPLEADO%NOTFOUND;  
                     DBMS_OUTPUT.PUT_LINE(CHR(9)|| CHR(9)|| '+ Empleado número ' || DATOS_C_EMPLEADO.CODEMPLEADO);
